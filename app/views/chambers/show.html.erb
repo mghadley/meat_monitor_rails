@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chamber.name %>
+</p>
+
+<p>
+  <strong>Target humidity:</strong>
+  <%= @chamber.target_humidity %>
+</p>
+
+<p>
+  <strong>Target temp:</strong>
+  <%= @chamber.target_temp %>
+</p>
+
+<p>
+  <strong>Token</strong>
+  <%= @chamber.token %>
+</p>
+
+<p>
+  <strong>Current Humidity</strong>
+  <%= @chamber.current_humidity %>
+</p>
+
+<p>
+  <strong>Current Temperature</strong>
+  <%= @chamber.current_temp %>
+</p>
+
+<%= link_to 'Edit', edit_chamber_path(@chamber) %> |
+<%= link_to 'Back', chambers_path %>

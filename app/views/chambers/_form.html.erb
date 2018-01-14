@@ -1,0 +1,32 @@
+<%= form_for(chamber) do |f| %>
+  <% if chamber.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(chamber.errors.count, "error") %> prohibited this chamber from being saved:</h2>
+
+      <ul>
+      <% chamber.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :target_humidity %>
+    <%= f.number_field :target_humidity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :target_temp %>
+    <%= f.number_field :target_temp %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

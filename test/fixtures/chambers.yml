@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: chambers
+#
+#  id               :integer          not null, primary key
+#  name             :string
+#  target_humidity  :integer
+#  target_temp      :integer
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  token            :string
+#  current_humidity :integer
+#  current_temp     :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  target_humidity: 1
+  target_temp: 1
+
+two:
+  name: MyString
+  target_humidity: 1
+  target_temp: 1

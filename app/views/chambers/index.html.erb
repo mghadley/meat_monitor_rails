@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Chambers</h1>
+
+<%= react_component("ChambersContainer") %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Target humidity</th>
+      <th>Target temp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chambers.each do |chamber| %>
+      <tr>
+        <td><%= chamber.name %></td>
+        <td><%= chamber.target_humidity %></td>
+        <td><%= chamber.target_temp %></td>
+        <td><%= link_to 'Show', chamber %></td>
+        <td><%= link_to 'Edit', edit_chamber_path(chamber) %></td>
+        <td><%= link_to 'Destroy', chamber, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chamber', new_chamber_path %>
