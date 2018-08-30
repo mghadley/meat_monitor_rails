@@ -35,6 +35,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'webpacker'
 gem 'react-rails'
 gem 'annotate'
+gem 'bootstrap', '~> 4.0.0'
+gem 'slim', '~> 3.0.9'
+gem 'devise', '~> 4.4.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

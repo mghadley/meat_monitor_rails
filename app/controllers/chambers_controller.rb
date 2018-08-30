@@ -4,7 +4,7 @@ class ChambersController < ApplicationController
   # GET /chambers
   # GET /chambers.json
   def index
-    @chambers = Chamber.all
+    @chambers = current_user.chambers
     respond_to do |format|
       format.html {}
       format.json { render json: @chambers }
